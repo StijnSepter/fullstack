@@ -1,0 +1,129 @@
+.appointment-page {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.appointment-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.02);
+}
+
+.section-header {
+    margin-bottom: 1rem;
+}
+
+.section-header h2 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.appointment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.appointment-item {
+    display: grid;
+    grid-template-columns: 74px 1fr auto;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface-muted);
+}
+
+.appointment-item.past {
+    opacity: 0.8;
+}
+
+.appointment-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 74px;
+    height: 74px;
+    border-radius: 16px;
+    background: var(--color-primary-soft);
+    color: var(--color-primary);
+    border: 1px solid rgba(37, 99, 235, 0.1);
+    text-align: center;
+}
+
+.date-day {
+    font-size: 1.45rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.date-month {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.appointment-content {
+    min-width: 0;
+}
+
+.appointment-type {
+    margin: 0 0 0.2rem;
+    color: var(--color-primary);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.appointment-content h3 {
+    margin: 0 0 0.25rem;
+    font-size: 1.02rem;
+    color: var(--color-text);
+}
+
+.appointment-meta {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 0.85rem;
+}
+
+.status-pill {
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
+    background: rgba(22, 163, 74, 0.08);
+    color: #15803d;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.past-pill {
+    background: rgba(100, 116, 139, 0.1);
+    color: var(--color-text-secondary);
+}
+
+.empty-state {
+    margin: 0;
+    color: var(--color-text-secondary);
+}
+
+@media (max-width: 640px) {
+    .appointment-item {
+        grid-template-columns: 1fr;
+        align-items: flex-start;
+    }
+
+    .appointment-date {
+        width: 60px;
+        height: 60px;
+    }
+
+    .status-pill {
+        justify-self: flex-start;
+    }
+}

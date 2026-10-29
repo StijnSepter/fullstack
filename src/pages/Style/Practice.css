@@ -1,0 +1,204 @@
+.practice-page {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.practice-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.practice-header h2 {
+    margin: 0;
+    font-size: clamp(1.8rem, 2vw, 2.4rem);
+    letter-spacing: -0.04em;
+}
+
+.filter-group {
+    display: inline-flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-group button {
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    color: var(--color-text);
+    border-radius: 999px;
+    padding: 0.75rem 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    min-height: 44px;
+    transition: all 0.2s ease;
+}
+
+.filter-group button.active {
+    background: var(--color-primary-soft);
+    color: var(--color-primary);
+    border-color: rgba(37, 99, 235, 0.12);
+}
+
+.exercise-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.exercise-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.exercise-card.completed {
+    border-color: rgba(22, 163, 74, 0.25);
+    background: rgba(22, 163, 74, 0.03);
+    box-shadow: inset 0 0 0 1px rgba(22, 163, 74, 0.05);
+}
+
+.exercise-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.exercise-topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.exercise-topline h3 {
+    margin: 0;
+    font-size: 1.35rem;
+    color: var(--color-text);
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 36px;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+}
+
+.status-badge.done {
+    background: rgba(22, 163, 74, 0.1);
+    color: #15803d;
+}
+
+.status-badge.todo {
+    background: rgba(245, 158, 11, 0.12);
+    color: #b45309;
+}
+
+.exercise-description {
+    margin: 0;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    font-size: 0.98rem;
+}
+
+.meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    color: var(--color-text-secondary);
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.video-box {
+    margin-top: 0.15rem;
+}
+
+.video-box a {
+    color: var(--color-primary);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.toggle-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    width: fit-content;
+    min-width: 190px;
+    min-height: 52px;
+    padding: 0.85rem 1.15rem;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    background: var(--color-surface-muted);
+    color: var(--color-text);
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.toggle-button:hover {
+    transform: translateY(-1px);
+}
+
+.toggle-button.completed {
+    background: rgba(22, 163, 74, 0.1);
+    border-color: rgba(22, 163, 74, 0.25);
+    color: #166534;
+}
+
+.toggle-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.4);
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+
+@media (max-width: 900px) {
+    .practice-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-group {
+        width: 100%;
+    }
+
+    .filter-group button {
+        flex: 1 1 auto;
+    }
+
+    .exercise-topline {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        width: 100%;
+    }
+}
