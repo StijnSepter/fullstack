@@ -8,20 +8,20 @@ import './Style/Login.css'
 </script>
 
 <template>
-  <div v-if="!showHome" class="auth-page">
+  <main v-if="!showHome" class="auth-page">
     <div class="auth-panel">
       <AuthBrand />
 
       <div class="auth-header">
         <h1>Inloggen</h1>
-        <p class="subtitle">
-          Nog geen account maak hem dan <a href="/register">hier</a> aan
-        </p>
+<!--        <p class="subtitle">-->
+<!--          Nog geen account maak hem dan <a href="/register">hier</a> aan-->
+<!--        </p>-->
       </div>
 
       <LoginForm />
     </div>
-  </div>
+  </main>
 
   <Dashboard v-else />
 </template>

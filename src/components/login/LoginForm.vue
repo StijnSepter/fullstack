@@ -46,8 +46,8 @@ import {
         <input v-model="rememberMe" type="checkbox" />
         <span>Onthoud mij</span>
       </label>
-
-      <a href="#" class="text-link">Wachtwoord vergeten?</a>
+<!--Dit was geen creteria onder de userstories daarom is dit niet gemaakt.-->
+<!--      <a href="#" class="text-link">Wachtwoord vergeten?</a>-->
     </div>
 
     <ClinicalButton type="submit" block>
@@ -96,12 +96,6 @@ import {
   width: 16px;
   height: 16px;
   accent-color: #1d4ed8;
-}
-
-.text-link {
-  color: #1d4ed8;
-  font-weight: 600;
-  font-size: 0.875rem;
 }
 
 @media (max-width: 520px) {

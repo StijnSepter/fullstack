@@ -11,13 +11,17 @@ import './Style/Practice.css'
 
 <template>
   <section class="practice-page">
-    <div class="practice-header">
+    <fieldset class="practice-header">
       <div>
         <p class="eyebrow">Fysio-oefeningen</p>
         <h2>Mijn oefeningen</h2>
       </div>
 
-      <div class="filter-group" aria-label="Filter oefeningen">
+<!--      fieldset and legend are semantic HTML elements used for grouped form controls-->
+<!--      fieldset  groeperdt realatieve from elementen samen-->
+<!--      Legend geeft de groep een screen reader label -->
+      <fieldset class="filter-group">
+        <legend class="sr-only">Filter oefeningen</legend>
         <button
             type="button"
             :class="{ active: statusFilter === 'all' }"
@@ -41,8 +45,8 @@ import './Style/Practice.css'
         >
           Afgerond
         </button>
-      </div>
-    </div>
+      </fieldset>
+    </fieldset>
 
     <div class="exercise-list">
       <article
